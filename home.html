@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHL Dashboard</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../img/Group 48095535.svg" alt="CF TOOLS">
+            <span class="sidebar-title">CF TOOLS</span>
+        </div>
+        <ul class="menu">
+            <li><a href="#" onclick="toggleSidebar()"><img src="../img/home.svg" alt="Home"><span>Home</span></a></li>
+            <li><a href="#"><img src="../img/pgc.svg" alt="PGC"><span>PGC (Coletas)</span></a></li>
+            <li><a href="#"><img src="../img/webedi.svg" alt="WEB-EDI"><span>Web-EDI</span></a></li>
+            <li><a href="#"><img src="../img/last chkpt.svg" alt="Last Checkpoint"><span>Last Checkpoint</span></a></li>
+            <li><a href="#"><img src="../img/tracking.svg" alt="Rastreio"><span>Rastreio</span></a></li>
+        </ul>
+    </div>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="topbar-logo">
+            <img src="../img/logo dhl.svg" alt="DHL Logo">
+        </div>
+        <div class="user-info">
+            <span>vinicius.f.silva@dhl.com</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="home-header">
+            <img src="../img/hand-wave.png" alt="Hand Waving" class="emoji">
+            <h1>Bem-vindo ao CFTOOLS!</h1>
+            <p>Utilize todas as ferramentas de Customer Facing em um único ecossistema.</p>
+        </div>
+              <div class="app-grid">
+            <div class="app-card">
+                <div class="app-title">
+                    <div class="icon-circle"><img src="../img/Car-DHL.svg" alt="PGC Icon"></div>
+                    <h2>PGC</h2>
+                </div>
+                <p>Painel de Gerenciamento de Coletas</p>
+                <p>O PGC é sua solução completa para gerar remessas e gerenciar coletas, importar grandes volumes de WBs e ainda ter acesso a um histórico completo de todos os seus envios.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-title">
+                    <div class="icon-circle"><img src="../img/prose.svg" alt="PROSE Icon"></div>
+                    <h2>PROSE</h2>
+                </div>
+                <p>Envio de sinais para remessas dos clientes</p>
+                <p>Utilize o PROSE para acompanhar e realizar o envio de sinais para as remessas da Flex, HP e SMS.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-title">
+                    <div class="icon-circle"><img src="../img/webedi-app.svg" alt="WEB EDI Icon"></div>
+                    <h2>WEB EDI</h2>
+                </div>
+                <p>Geração de faturas comerciais</p>
+                <p>Utilize o WEB EDI para gerar faturas comerciais de clientes.</p>
+            </div>
+            <div class="app-card">
+                <div class="app-title">
+                    <div class="icon-circle"><img src="../img/lastchkpt-app.svg" alt="Last Checkpoint Icon"></div>
+                    <h2>Last Checkpoint</h2>
+                </div>
+                <p>Obtenha o último evento da remessa.</p>
+            </div>
+        </div>
+    </div>
+           <div class="topbar">
+        <div class="topbar-logo">
+            <img src="../img/logo dhl.svg" alt="DHL Logo">
+        </div>
+
+        <div class="user-menu">
+            <img src="../img/user-icon.svg" alt="User Icon" class="user-icon">
+            <span class="user-email">vinicius.f.silva@dhl.com</span>
+            <div class="dropdown">
+                <span class="dropdown-arrow">▼</span>
+                <div class="dropdown-content">
+                    <p>ID: 00001</p>
+                    <p>Tipo: Administrador</p>
+                    <ul>
+                        <li><a href="#">Minha Conta</a></li>
+                        <div class="logout-button">
+                            <button type="submit">Logout</button>
+                        </div>
+                    </ul>
+                    <hr>
+                    <a href="#">CFTOOLS - Versão 1.00</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripthome.js"></script>
+</body>
+</html>
