@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta no CF Tools</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="../img/logo dhl.svg" alt="DHL Logo">
+        </div>
+        <h2>Criar conta no CF Tools</h2>
+        <form id="signupForm" onsubmit="return handleSignup(event)">
+            <div class="form-group">
+                <input type="text" id="firstName" placeholder="Primeiro Nome" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="lastName" placeholder="Sobrenome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Endereço de E-mail" required>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Senha" oninput="checkPasswordStrength()" required>
+                <button type="button" onclick="togglePasswordVisibility()">
+                </button>
+            </div>
+            <div class="password-strength-container">
+              <p>Sua senha deve atender aos seguintes critérios:</p>
+              <div class="password-requirements">
+                  <div id="length-check" class="requirement">
+                      <svg class="check-icon" viewBox="0 0 24 24" width="18" height="18">
+                          <path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0 2c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" clip-rule="evenodd"></path>
+                          <path fill-rule="evenodd" d="M18.707 8.207L10 16.914l-4.207-4.207 1.414-1.414L10 14.086l7.293-7.293 1.414 1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                      8 ou mais caracteres são obrigatórios.
+                  </div>
+                  <div id="case-check" class="requirement">
+                      <svg class="check-icon" viewBox="0 0 24 24" width="18" height="18">
+                          <path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0 2c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" clip-rule="evenodd"></path>
+                          <path fill-rule="evenodd" d="M18.707 8.207L10 16.914l-4.207-4.207 1.414-1.414L10 14.086l7.293-7.293 1.414 1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                      Maiúsculas e minúsculas são obrigatórias.
+                  </div>
+                  <div id="number-check" class="requirement">
+                      <svg class="check-icon" viewBox="0 0 24 24" width="18" height="18">
+                          <path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0 2c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" clip-rule="evenodd"></path>
+                          <path fill-rule="evenodd" d="M18.707 8.207L10 16.914l-4.207-4.207 1.414-1.414L10 14.086l7.293-7.293 1.414 1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                      Pelo menos um número é obrigatório.
+                  </div>
+                  <div id="special-check" class="requirement">
+                      <svg class="check-icon" viewBox="0 0 24 24" width="18" height="18">
+                          <path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm0 2c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12z" clip-rule="evenodd"></path>
+                          <path fill-rule="evenodd" d="M18.707 8.207L10 16.914l-4.207-4.207 1.414-1.414L10 14.086l7.293-7.293 1.414 1.414z" clip-rule="evenodd"></path>
+                      </svg>
+                      Pelo menos um caractere especial é obrigatório.
+                  </div>
+              </div>
+              <p>Força:</p>
+              <div class="password-strength-bar">
+                  <div id="password-strength-indicator"></div>
+              </div>
+          </div>
+            <div class="button-container">
+                <button type="submit">Criar Conta</button>
+            </div>
+        </form>
+        <div class="form-links">
+            <a href="index.html">Você já tem uma conta? Fazer Login</a>
+        </div>
+    </div>
+    <div class="background-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ function toggleSidebar() {
 
     const topbar = document.querySelector('.topbar');
     if (sidebar.classList.contains('collapsed')) {
-        topbar.style.width = "calc(100% - 70px)";
+        topbar.style.width = "calc(100% - 50px)";
         topbar.style.left = "50px";
     } else {
         topbar.style.width = "calc(100% - 250px)";

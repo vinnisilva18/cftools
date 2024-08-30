@@ -19,13 +19,15 @@
                 <input type="email" id="email" placeholder="Endereço de email" required>
             </div>
             <div class="form-group">
-                <input type="password" id="password" placeholder="Senha" required>
-                <button type="button" onclick="togglePasswordVisibility()">
-                    <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path id="eye-open" fill-rule="evenodd" clip-rule="evenodd" d="M12 20c-4.667 0-8.333-2.667-11-8 2.667-5.333 6.333-8 11-8s8.333 2.667 11 8c-2.667 5.333-6.333 8-11 8zm0-3a5 5 0 100-10 5 5 0 000 10zm0-2a3 3 0 110-6 3 3 0 010 6z"/>
-                        <path id="eye-closed" fill-rule="evenodd" clip-rule="evenodd" d="M3.35 12c.551 1.102 1.147 2.052 1.784 2.857 1.232 1.556 2.617 2.568 4.15 3.091a8.336 8.336 0 002.716.435c.97 0 1.874-.147 2.716-.434 1.533-.524 2.918-1.536 4.15-3.092.637-.805 1.233-1.755 1.784-2.857l1.684.842a19.323 19.323 0 01-1.473 2.489L23 17.344l-1.29 1.371-2.031-1.91c-1.021 1.11-2.16 1.967-3.42 2.55l.923 2.193-1.735.73-.97-2.301c-.795.193-1.621.289-2.477.289-.856 0-1.682-.096-2.478-.29l-.969 2.302-1.735-.73.923-2.193c-1.26-.583-2.399-1.44-3.42-2.55l-2.03 1.91L1 17.345l2.14-2.014a19.314 19.314 0 01-1.474-2.489L3.35 12z"></path>
-                    </svg>
-                </button>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Senha" required>
+                    <button type="button" onclick="togglePasswordVisibility()">
+                        <svg id="eye-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path id="eye-open" fill-rule="evenodd" clip-rule="evenodd" d="M12 20c-4.667 0-8.333-2.667-11-8 2.667-5.333 6.333-8 11-8s8.333 2.667 11 8c-2.667 5.333-6.333 8-11 8zm0-3a5 5 0 100-10 5 5 0 000 10zm0-2a3 3 0 110-6 3 3 0 010 6z"/>
+                            <path id="eye-closed" fill-rule="evenodd" clip-rule="evenodd" d="M3.35 12c.551 1.102 1.147 2.052 1.784 2.857 1.232 1.556 2.617 2.568 4.15 3.091a8.336 8.336 0 002.716.435c.97 0 1.874-.147 2.716-.434 1.533-.524 2.918-1.536 4.15-3.092.637-.805 1.233-1.755 1.784-2.857l1.684.842a19.323 19.323 0 01-1.473 2.489L23 17.344l-1.29 1.371-2.031-1.91c-1.021 1.11-2.16 1.967-3.42 2.55l.923 2.193-1.735.73-.97-2.301c-.795.193-1.621.289-2.477.289-.856 0-1.682-.096-2.478-.29l-.969 2.302-1.735-.73.923-2.193c-1.26-.583-2.399-1.44-3.42-2.55l-2.03 1.91L1 17.345l2.14-2.014a19.314 19.314 0 01-1.474-2.489L3.35 12z"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="button-container">
                 <button type="submit">Conecte-se</button>
@@ -33,7 +35,7 @@
         </form>
         <div class="form-links">
             <a href="#">Esqueceu sua senha?</a>
-            <a href="#">Ainda não tem conta? Inscreva-se</a>
+            <a href="account.html">Ainda não tem conta? Inscreva-se</a>
             <p><a href="#">Termos e Condições e Declaração de Privacidade</a></p>
             <a href="#">Preferências de cookies</a>
         </div>

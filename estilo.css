@@ -1,4 +1,4 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -13,7 +13,7 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Topbar */
+
 .topbar {
     width: calc(100% - 250px);
     background-color: #FFCC00;
@@ -25,12 +25,39 @@ body {
     left: 250px;
     z-index: 1000;
     transition: all 0.3s ease;
-    border-bottom: 2px solid #ccc; /* Contorno cinza abaixo */
+    border-bottom: 2px solid #ccc;
+    background: linear-gradient(90deg, rgb(255, 204, 0), rgb(255, 229, 127), rgb(255, 240, 178));
 }
+
 
 .topbar-logo {
     height: 40px;
     margin-right: 10px;
+}
+
+.user-info {
+    color: #000;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.user-info .profile-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.user-info .dropdown-arrow {
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #000;
 }
 
 .search-container {
@@ -156,8 +183,8 @@ body {
 }
 
 .sidebar.collapsed ~ .topbar {
-    width: calc(100% - 70px);
-    left: 70px;
+    width: 1230px;
+
 }
 
 .topbar-logo img {
@@ -178,7 +205,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 50px);
 }
 
 .main-content .home-header {
@@ -215,7 +242,7 @@ body {
 
 .app-card {
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
     transition: transform 0.2s ease-in-out;
@@ -352,12 +379,17 @@ body {
     height: 70%;
 }
 
-.logout-button {
-    color: red;
+.logout-button button {
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
     cursor: pointer;
 }
-.logout-button:hover {
-    text-decoration: underline;
+
+.logout-button button:hover {
+    background-color: #CC0000;
 }
 
 .search-container {
@@ -389,11 +421,42 @@ body {
     height: 16px;
 }
 
-.user-info-box .arrow-icon {
-    margin-left: 10px;
-    cursor: pointer;
+.notifications, .user-info {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
-.user-info-box.active .dropdown-content {
-    display: block;
+.notification-icon, .profile-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.user-info span {
+    margin-left: 10px;
+    color: black;
+}
+
+.user-info-box {
+    display: flex;
+    align-items: center;
+
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: auto;
+    position: relative;
+    border: 1px solid white;
+
+}
+
+
+.home-header h1 .emoji {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.sidebar.collapsed .menu li span {
+    display: none;
 }
