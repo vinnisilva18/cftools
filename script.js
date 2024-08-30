@@ -63,34 +63,32 @@ function checkPasswordStrength() {
         lengthCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
         strength += 25;
     } else {
-        lengthCheck.querySelector(".check-icon").style.fill = "#ccc"; // Cinza
+        lengthCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza Escuro
     }
 
     if (/[a-z]/.test(password) && /[A-Z]/.test(password)) {
         caseCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
         strength += 25;
     } else {
-        caseCheck.querySelector(".check-icon").style.fill = "#ccc"; // Cinza
+        caseCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza
     }
 
     if (/\d/.test(password)) {
         numberCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
         strength += 25;
     } else {
-        numberCheck.querySelector(".check-icon").style.fill = "#ccc"; // Cinza
+        numberCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza
     }
 
     if (/[^A-Za-z0-9]/.test(password)) {
         specialCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
         strength += 25;
     } else {
-        specialCheck.querySelector(".check-icon").style.fill = "#ccc"; // Cinza
+        specialCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza
     }
 
-    // Atualizar a largura da barra de força da senha
     passwordStrengthIndicator.style.width = strength + "%";
 
-    // Mudar a cor da barra dependendo da força
     if (strength < 100) {
         passwordStrengthIndicator.style.backgroundColor = "#f00"; // Vermelho
     } else {
@@ -98,5 +96,4 @@ function checkPasswordStrength() {
     }
 }
 
-// Vincular o evento de input ao campo de senha
 document.getElementById("password").addEventListener("input", checkPasswordStrength);
