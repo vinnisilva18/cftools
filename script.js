@@ -60,39 +60,39 @@ function checkPasswordStrength() {
 
     // Verificação de critérios
     if (password.length >= 8) {
-        lengthCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
+        lengthCheck.querySelector(".check-icon").style.fill = "#28a745"; 
         strength += 25;
     } else {
-        lengthCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza Escuro
+        lengthCheck.querySelector(".check-icon").style.fill = "#333"; 
     }
 
     if (/[a-z]/.test(password) && /[A-Z]/.test(password)) {
-        caseCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
+        caseCheck.querySelector(".check-icon").style.fill = "#28a745";
         strength += 25;
     } else {
-        caseCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza
+        caseCheck.querySelector(".check-icon").style.fill = "#333";
     }
 
     if (/\d/.test(password)) {
-        numberCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
+        numberCheck.querySelector(".check-icon").style.fill = "#28a745";
         strength += 25;
     } else {
-        numberCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza
+        numberCheck.querySelector(".check-icon").style.fill = "#333";
     }
 
     if (/[^A-Za-z0-9]/.test(password)) {
-        specialCheck.querySelector(".check-icon").style.fill = "#28a745"; // Verde
+        specialCheck.querySelector(".check-icon").style.fill = "#28a745"; 
         strength += 25;
     } else {
-        specialCheck.querySelector(".check-icon").style.fill = "#333"; // Cinza
+        specialCheck.querySelector(".check-icon").style.fill = "#333";
     }
 
     passwordStrengthIndicator.style.width = strength + "%";
 
     if (strength < 100) {
-        passwordStrengthIndicator.style.backgroundColor = "#f00"; // Vermelho
-    } else {
-        passwordStrengthIndicator.style.backgroundColor = "#28a745"; // Verde
+        passwordStrengthIndicator.style.backgroundColor = "#f00";
+        
+        passwordStrengthIndicator.style.backgroundColor = "#28a745";
     }
 }
 
