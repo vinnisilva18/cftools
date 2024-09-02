@@ -21,3 +21,24 @@ document.querySelector('.dropdown-arrow').addEventListener('click', function() {
 document.querySelector('.logout-button').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
+
+function toggleNotificationPopup() {
+    const popup = document.getElementById('notification-popup');
+    popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
+}
+
+function toggleNotificationPopup() {
+    const popup = document.getElementById('notification-popup');
+    popup.style.display = popup.style.display === 'none' || popup.style.display === '' ? 'block' : 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const tabListItems = document.querySelectorAll('.tab-list li');
+    
+    tabListItems.forEach((tab, index) => {
+        tab.addEventListener('click', function () {
+            tabListItems.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
