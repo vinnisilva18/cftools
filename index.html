@@ -12,7 +12,7 @@
             <img src="../img/logo dhl.svg" alt="DHL Logo">
         </div>
         <div class="button-container">
-            <button type="button">Login-SSO</button>
+            <button id="login-sso-btn" type="button">Login-SSO</button>
         </div>
         <form id="loginForm" onsubmit="return handleLogin(event)">
             <div class="form-group">
@@ -42,5 +42,41 @@
     </div>
     <div class="background-container"></div>
     <script src="script.js"></script>
+    <script src="https://alcdn.msauth.net/browser/2.16.0/js/msal-browser.min.js"></script>
+    <script>
+    const msalConfig = {
+        auth: {
+            clientId: '089695c3-7ca9-44b7-b8d9-626c8f1f96a2',
+            authority: 'https://login.microsoftonline.com/vinicius12.onmicrosoft.com',
+            redirectUri: 'https://cftools.vercel.app/auth/callback'
+        }
+    };
+            const msalInstance = new msal.PublicClientApplication(msalConfig);
+
+            function login() {
+                console.log('Tentando login SSO...');
+                const loginRequest = {
+                    scopes: ["user.read"]
+                };
+
+                msalInstance.loginPopup(loginRequest).then(response => {
+                    console.log('Usuário logado:', response.account);
+                    window.location.href = 'home.html';
+                }).catch(error => {
+                    console.error('Erro no login:', error);
+                });
+            }
+
+
+            const ssoButton = document.getElementById('login-sso-btn');
+            if (ssoButton) {
+                ssoButton.addEventListener('click', () => {
+                    console.log('Botão SSO clicado');
+                    login();
+                });
+            } else {
+                console.error('Botão SSO não encontrado no DOM');
+            }
+</script>
 </body>
 </html>

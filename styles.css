@@ -40,7 +40,22 @@ h2 {
     margin-bottom: 15px;
 }
 
-.button-container button {
+.button-container button{
+    width: 100%;
+    background-color: #D40511;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 18px;
+    font-family: 'Delivery', Arial, sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+
+.button-container button{
     width: 100%;
     background-color: #D40511;
     color: white;
@@ -162,6 +177,7 @@ h2 {
 .btn-create-account {
     margin-top: 20px;
 }
+
 
 @media (max-width: 768px) {
     .login-container {
